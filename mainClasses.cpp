@@ -1,3 +1,7 @@
+#include <string>
+
+using namespace std;
+
 class Gameboard{
 	char gameSpace[4][4];
 public:
@@ -16,4 +20,4 @@ public:
 	void setValue(char valueIn);
 	string getName();
 	char getValue();
-}
+};
