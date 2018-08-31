@@ -5,6 +5,7 @@
 int main(){
 	User userX, userO;
 	string nameX, nameO;
+	Gameboard board;
 
 	userX.setValue('x');
 	userO.setValue('o');
@@ -19,6 +20,8 @@ int main(){
 
 	cout << "X player: " << userX.getName() << endl;
 	cout << "O player: " << userO.getName() << endl;
+
+	board.printBoard();
 
 	return 0;
 }

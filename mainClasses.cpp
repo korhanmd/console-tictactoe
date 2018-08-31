@@ -9,7 +9,7 @@ public:
 	void setGameSpace(int row, int column, char value);
 	char getGameSpace(int row, int column);
 	int checkResult();
-	int printBoard();
+	void printBoard();
 };
 
 class User{
