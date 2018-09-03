@@ -65,9 +65,13 @@ int Gameboard::checkResult(){
 void Gameboard::printBoard(){
 	cout << "Board:\n";
 
+	cout << "\t0 1 2 3\n";
+
 	for (int i = 0; i < 4; i++){
+		cout << i << "\t";
+
 		for (int j = 0; j < 4; j++){
-			cout << gameSpace[i][j];
+			cout << gameSpace[i][j] << " ";
 		}
 
 		cout << "\n";
