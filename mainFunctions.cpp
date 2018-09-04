@@ -1,3 +1,13 @@
+void turn(Gameboard &board, User user){
+	int row, column;
+
+	cout << user.getName() << "'s turn. Enter row: ";
+	cin >> row;
+	cout << "Enter column: ";
+	cin >> column;
+	board.setGameSpace(row, column, user.getValue());
+}
+
 Gameboard::Gameboard(){
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4 ; j++){

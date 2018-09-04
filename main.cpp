@@ -6,7 +6,6 @@ int main(){
 	User userX, userO;
 	string nameX, nameO;
 	Gameboard board;
-	int row, column;
 
 	userX.setValue('x');
 	userO.setValue('o');
@@ -26,18 +25,10 @@ int main(){
 
 	for (int i = 0; i < 16; i++){
 		if (i % 2 == 0){
-			cout << userX.getName() << "'s turn. Enter row: ";
-			cin >> row;
-			cout << "Enter column: ";
-			cin >> column;
-			board.setGameSpace(row, column, userX.getValue());
+			turn(board, userX);
 		}
 		else if (i % 2 == 1){
-			cout << userO.getName() << "'s turn. Enter row: ";
-			cin >> row;
-			cout << "Enter column: ";
-			cin >> column;
-			board.setGameSpace(row, column, userO.getValue());
+			turn(board, userO);
 		}
 
 		board.printBoard();
