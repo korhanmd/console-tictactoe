@@ -4,14 +4,19 @@ void turn(Gameboard &board, User user){
 	cout << user.getName() << "'s turn!\n";
 
 	do {
-		cout << "Enter row (between 0-3): ";	
-		cin >> row;
-	} while (row < 0 || row > 3);
+		do {
+			cout << "Enter row (between 0-3): ";	
+			cin >> row;
+		} while (row < 0 || row > 3);
 
-	do {
-		cout << "Enter column (between 0-3): ";
-		cin >> column;
-	} while (column < 0 || column > 3);
+		do {
+			cout << "Enter column (between 0-3): ";
+			cin >> column;
+		} while (column < 0 || column > 3);
+
+		if (board.getGameSpace(row, column) != '-')
+			cout << "This tile is not empty. Choose another.\n";
+	} while (board.getGameSpace(row, column) != '-');
 	
 	board.setGameSpace(row, column, user.getValue());
 }
