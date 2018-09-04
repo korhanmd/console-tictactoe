@@ -6,6 +6,7 @@ int main(){
 	User userX, userO;
 	string nameX, nameO;
 	Gameboard board;
+	int result;
 
 	userX.setValue('x');
 	userO.setValue('o');
@@ -32,7 +33,20 @@ int main(){
 		}
 
 		board.printBoard();
+
+		result = board.checkResult();
+
+		if (result == 1){
+			cout << "***" << userX.getName() << " won!***" << endl;
+			break;
+		}
+		else if (result == 2){
+			cout << "***" << userO.getName() << " won!***" << endl;
+			break;
+		}
 	}
+
+	cout << "***Draw!***" << endl;
 
 	return 0;
 }

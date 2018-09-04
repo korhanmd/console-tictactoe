@@ -38,7 +38,7 @@ char Gameboard::getGameSpace(int row, int column){
 }
 
 int Gameboard::checkResult(){
-	// Return 1 for X victory, 2 for Y victory, 0 else
+	// Return 1 for X victory, 2 for O victory, 0 else
 
 	// Counters for vertical, horizontal and diagonal
 	int cvx, chx, cdx, cvy, chy, cdy, crdx, crdy;
@@ -50,11 +50,11 @@ int Gameboard::checkResult(){
 		for (int j = 0; j < 4 ; j++){
 			if (gameSpace[i][j] == 'x')
 				cvx++;
-			if (gameSpace[i][j] == 'y')
+			if (gameSpace[i][j] == 'o')
 				cvy++;
 			if (gameSpace[j][i] == 'x')
 				chx++;
-			if (gameSpace[j][i] == 'y')
+			if (gameSpace[j][i] == 'o')
 				chy++;
 		}
 
@@ -69,11 +69,11 @@ int Gameboard::checkResult(){
 	for(int i = 0; i < 4; i++){
 		if (gameSpace[i][i] == 'x')
 			cdx++;
-		if (gameSpace[i][i] == 'y')
+		if (gameSpace[i][i] == 'o')
 			cdy++;
 		if (gameSpace[i][3-i] == 'x')
 			crdx++;
-		if (gameSpace[i][3-i] == 'y')
+		if (gameSpace[i][3-i] == 'o')
 			crdy++;
 	}
 
