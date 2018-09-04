@@ -1,10 +1,18 @@
 void turn(Gameboard &board, User user){
 	int row, column;
 
-	cout << user.getName() << "'s turn. Enter row: ";
-	cin >> row;
-	cout << "Enter column: ";
-	cin >> column;
+	cout << user.getName() << "'s turn!\n";
+
+	do {
+		cout << "Enter row (between 0-3): ";	
+		cin >> row;
+	} while (row < 0 || row > 3);
+
+	do {
+		cout << "Enter column (between 0-3): ";
+		cin >> column;
+	} while (column < 0 || column > 3);
+	
 	board.setGameSpace(row, column, user.getValue());
 }
 
